@@ -139,7 +139,7 @@ class equation_system():
         # no conditions failed
         return True
 
-    def to_reduceret_triangular(self):
+    def to_reduced_triangular(self):
         if not self.is_triangular():
             if self.debug:
                 print(self)
@@ -263,4 +263,4 @@ class equation_system():
 
 eq1315 = equation_system([[2, -1, 1],
                           [2, -1, 1],
-                          [4, 1, 1]], [0, 0, 2]).to_reduceret_triangular()
+                          [4, 1, 1]], [0, 0, 2], circle_pivots = True).to_reduced_triangular()
